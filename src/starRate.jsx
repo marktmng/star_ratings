@@ -28,7 +28,8 @@ export default function StarRate() {
               {/* Star icon - changes color based on the selected rating */}
               <FaStar
                 size={50} // Sets star size
-                color={currentRate <= (color || rating) ? "yellow" : "grey"} // Highlights stars up to selected rating
+                color={currentRate <= (color || rating) ? "yellow" : "grey"} // If the current rating (currentRate) is less than or equal to the selected rating (color or rating),
+                // set the star color to yellow (highlighted), otherwise set it to grey (unhighlighted)
               />
             </label>
           </>
