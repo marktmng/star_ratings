@@ -14,6 +14,11 @@ export default function StarRate() {
       {[...Array(5)].map((star, index) => {
         const currentRate = index + 1; // Star rating starts from 1 (not 0)
 
+        const rateBtn = () => {
+          setRating(currentRate);
+          setColor(currentRate);
+        };
+
         return (
           <>
             <label>
@@ -22,7 +27,7 @@ export default function StarRate() {
                 type="radio"
                 name="rate"
                 value={currentRate}
-                onClick={() => setRating(currentRate)}
+                onClick={rateBtn}
                 style={{ display: "none" }} // Hides the radio button
               />
               {/* Star icon - changes color based on the selected rating */}
